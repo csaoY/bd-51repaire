@@ -1,0 +1,45 @@
+<import src="../templates/netError.swan.l" />
+<view class="con">
+  <progress percent="{{pro}}" show-info activeColor="#ff9d00" backgroundColor="#d3d3d3" />
+  <view class="phone-kind">
+    <text>评估型号: {{phone}}</text>
+  </view>
+  <template s-if="{{hasNetError===true}}" is="netError" data="{{...item}}" />
+  <block s-for="{{assessments}}" swan.key="typeId" s-for-index="idx" s-for-item="assessment" data-idx="{{idx}}">
+    <view class="issue">
+      <view class="issue_list">
+        <view class="issue-title">
+          <text class="icon icon{{idx+1}}">{{idx+1}}</text>{{assessment.typeName}}
+        </view>
+        <text class="show-issue">{{assessment.assessment_name_selected}}</text>
+        <view class="modify" hidden="{{eventId<idx}}" data-idx="{{idx}}" catchtap="onModifyItem">修改</view>
+        <view s-if="{{eventId==idx}}">
+          <block s-for="{{assessment.detail}}" swan.key="id" s-for-item="assessmentSub">
+            <view s-if="{{assessmentSub.isSelected==true}}" class="select slect-active" data-idx="{{idx}}" data-assessmentName="{{assessmentSub.datail}}" data-assessmentid="{{assessmentSub.id}}" catchtap="onSelectItem">{{assessmentSub.datail}}</view>
+            <view swan.elif="{{assessmentSub.isSelected==false}}" class="select" data-idx="{{idx}}" data-assessmentName="{{assessmentSub.datail}}" data-assessmentid="{{assessmentSub.id}}" catchtap="onSelectItem">{{assessmentSub.datail}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view s-if="{{options.length!=0}}" class="issue">
+    <view class="issue_list">
+      <view class="issue-title">
+        功能选项(可多选或者不选)
+      </view>
+      <text class="show-issue"></text>
+      <view>
+        <block s-for="{{options}}" swan.key="id" s-for-item="option" s-for-index="idx">
+          <view s-if="{{option.isSelected==true}}" class="select slect-active" data-idx="{{idx}}"  data-optionid="{{option.id}}" catchtap="onSelectOptionItem">{{option.detailName}}</view>
+          <view swan.elif="{{option.isSelected==false}}" class="select" data-idx="{{idx}}" data-optionid="{{option.id}}" catchtap="onSelectOptionItem">{{option.detailName}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+  
+  <view style="height:136rpx"></view>
+  <view class="bot">
+    <button disabled="{{pro!=100}}" catchtap="showList">立即估价</button>
+  </view>
+</view>

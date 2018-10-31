@@ -1,0 +1,30 @@
+
+<view class="container more">
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/dingdan.png"></image>
+      </view>
+      <view class="myitem-name flex-item" bindtap="myorder">
+        <text>我的订单</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/kefu.png"></image>
+      </view>
+      <view class="myitem-name flex-item" bindtap="makePhoneCall">
+        <text>联系客服</text>
+      </view>
+    </view>
+  </view>
+</view>

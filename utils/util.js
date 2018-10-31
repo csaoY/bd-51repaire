@@ -1,73 +1,234 @@
-function formatTime(date) {
-  var year = date.getFullYear()
-  var month = date.getMonth() + 1
-  var day = date.getDate()
-
-  var hour = date.getHours()
-  var minute = date.getMinutes()
-  var second = date.getSeconds()
-
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+var app = getApp()
+var timestamp;//判断重复点击的时间戳
+function httpRequest(url, data, method) {
+	return new Promise(function (resolve, reject) {
+		swan.request({
+			url: url,
+			method: method,
+			data: data,
+			header: {
+				//'Content-Type': 'application/json'
+			},
+			success: function (res) {
+				console.log("success")
+				resolve(res)
+			},
+			fail: function (res) {
+				reject(res)
+				console.log("failed")
+			}
+		})
+	})
 }
 
-function formatNumber(n) {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+//判断是否为重复点击
+function isRepeatClick() {
+	var currentTime = (new Date()).valueOf();
+	if (currentTime - this.timestamp < 500) {//点击时间差小于500毫秒时视为重复点击
+		this.timestamp = currentTime;
+		return true
+	} else {
+		this.timestamp = currentTime;
+		return false
+	}
 }
+const _ = require('underscore')
+const $ = {};
 
-module.exports = {
-  formatTime: formatTime
-};
+console.log(
+	'%c名称：util\n' +
+	'作者：萤火虫\n' +
+	'版本：1.1.0\n' +
+	'说明：  util提供许多实用的工具，如：timeUtil（日期相关工具），listener（触发管理器），log（日志管理），详情请翻看源码！'
+	, 'color:#16a085;text-shadow:0 0 10px #1abc9c;font-size:14px;');
 
-var index = require('../data/data_index.js')
-var index_next = require('../data/data_index_next.js')
-var discovery = require('../data/data_discovery.js')
-var discovery_next = require('../data/data_discovery_next.js')
+/**
+ * 日期相关工具
+ * @type {{format}}
+ */
+$.timeUtil = (function ($) {
+	"use strict";
+	return {
+		/**
+		 * 格式化日期
+		 * @param {Number|Date} time
+		 * @param {string} fmt
+		 * @return {string}
+		 */
+		format: function (fmt, time) {
+			time = time || new Date();
+			time = time instanceof Date ? time : new Date(time);
+			const o = {
+				"M+": time.getMonth() + 1,                 //月份
+				"d+": time.getDate(),                    //日
+				"h+": time.getHours(),                   //小时
+				"m+": time.getMinutes(),                 //分
+				"s+": time.getSeconds(),                 //秒
+				"q+": Math.floor((time.getMonth() + 3) / 3), //季度
+				"S": time.getMilliseconds()             //毫秒
+			};
+			if (/(y+)/.test(fmt)) {
+				fmt = fmt.replace(RegExp.$1, (time.getFullYear() + "").substr(4 - RegExp.$1.length));
+			}
+			for (const k in o) {
+				if (new RegExp("(" + k + ")").test(fmt)) {
+					fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+				}
+			}
+			return fmt;
+		},
+		/**
+		 * 快速格式化日期
+		 * @param {Number|Date} [time]
+		 * @param {boolean} [isShowSeconds]
+		 */
+		formatDatetime: function (time, isShowSeconds) {
+			isShowSeconds = isShowSeconds || false;
+			return this.format("yyyy-MM-dd hh:mm" + (isShowSeconds ? ":ss" : ""), time || new Date());
+		},
+		/**
+		 * 只格式化日期部分
+		 * @param {Number|Date} [time]
+		 */
+		formatDate: function (time) {
+			return this.format("yyyy-MM-dd", time || new Date());
+		},
+		/**
+		 * 只格式化时间部分
+		 * @param {Number|Date} [time]
+		 * @param {boolean} [isShowSeconds]
+		 */
+		formatTime: function (time, isShowSeconds) {
+			isShowSeconds = isShowSeconds || false;
+			return this.format("hh:mm" + (isShowSeconds ? ":ss" : ""), time || new Date());
+		}
+	};
+})($);
 
-function getData(url){
-  return new Promise(function(resolve, reject){
-    wx.request({
-      url: url,
-      data: {},
-      header: {
-        //'Content-Type': 'application/json'
-      },
-      success: function(res) {
-        console.log("success")
-        resolve(res)
-      },
-      fail: function (res) {
-        reject(res)
-        console.log("failed")
-      }
-    })
-  })
-}
+/**
+ * 触发管理器
+ * @type {{addEventListener, removeEventListener, fireListener}}
+ */
+$.listener = (function ($) {
+	"use strict";
+	//触发器总集合
+	const LISTENER_MANAGER = [];
+	return {
+		/**
+		 * 添加监听器
+		 * @param {string} name
+		 * @param {callback} listener
+		 */
+		addEventListener: function (name, listener) {
+			if (!name || !isNaN(parseInt(name)))
+				throw TypeError("监听器名称只能为英文字母以及下划线！");
+			if (!_.isFunction(listener))
+				throw TypeError("监听器只能为回调函数！");
 
-function getData2(){
-  return index.index;
-}
+			//判断当前监听器是否存在，不存在则直接创建一个空数组
+			if (LISTENER_MANAGER[name] === undefined)
+				LISTENER_MANAGER[name] = [];
 
-function getNext(){
-  return index_next.next;
-}
+			LISTENER_MANAGER[name].push(listener);
+		},
+		/**
+		 * 移除监听器
+		 * @param {string} name
+		 * @param {callback} listener
+		 */
+		removeEventListener: function (listener, name) {
+			//如果传递的不是一个回调函数，则直接返回
+			if (!_.isFunction(listener)) return;
 
-function getDiscovery(){
-  return discovery.discovery;
-}
+			//处理器
+			const handler = function (listeners, listener) {
+				const index = _.indexOf(listeners, listener);
+				if (index !== -1)
+					listeners.splice(index, 1);
+			};
+			if (!name || !isNaN(parseInt(name))) {
+				//所有监听器都移除这个回调函数
+				_.each(LISTENER_MANAGER, function (listeners) {
+					handler(listeners, listener);
+				});
+			} else {
+				handler(LISTENER_MANAGER[name] || [], listener);
+			}
+		},
+		/**
+		 * 触发监听器
+		 * @param {string} name
+		 * @param {Array} [param]
+		 * @param {Object} [obj]
+		 */
+		fireListener: function (name, param, obj) {
+			if (!name || !isNaN(parseInt(name)))
+				throw TypeError("监听器名称只能为英文字母以及下划线！");
 
-function discoveryNext(){
-  return discovery_next.next;
-}
+			const listeners = LISTENER_MANAGER[name] || [];
+			for (let i = 0; i < listeners.length; i++)
+				if (listeners[i].apply(obj, param) === false)
+					return false;
+		}
+	};
+})($);
+_.extend($, $.listener);
 
+/**
+ * 日志管理
+ * @type {{write, read, clear}}
+ * @param {root} $
+ */
+$.log = (function ($) {
+	"use strict";
+	return {
+		/**
+		 * 写入一条日志
+		 * @param {string} body
+		 * @param {boolean} [isError]
+		 */
+		write: function (body, isError) {
+			//调用API从本地缓存中获取数据
+			let logs = swan.getStorageSync('logs') || [];
 
+			//创建一条记录
+			let item = {
+				datetime: $.timeUtil.formatDatetime(new Date(), true),
+				content: body,
+				isError: isError || false
+			};
+			logs.unshift(item);
 
-module.exports.getData = getData;
-module.exports.getData2 = getData2;
-module.exports.getNext = getNext;
-module.exports.getDiscovery = getDiscovery;
-module.exports.discoveryNext = discoveryNext;
+			//只缓存最近1000条记录
+			if (logs.length > 1000)
+				logs.splice(1000, 1);
+
+			//缓存数据
+			swan.setStorageSync('logs', logs);
+			//触发事件
+			$.listener.fireListener('log.push', [item]);
+		},
+		/**
+		 * 读取日志
+		 * @returns {Array}
+		 */
+		read: function () {
+			return (swan.getStorageSync('logs') || []);
+		},
+		/**
+		 * 清除日志
+		 */
+		clear: function () {
+			swan.setStorageSync('logs', []);
+		},
+
+	}
+})($);
+
+module.exports = $;
+module.exports.httpRequest = httpRequest;
+module.exports.isRepeatClick = isRepeatClick;
+
 
 
 

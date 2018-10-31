@@ -1,0 +1,14 @@
+
+<!--pages/more/phonebinding/phonebinding.swan.l-->
+<view class="con">
+  <view class="yzm">
+    <input placeholder="请输入手机号码" class="yamn" />
+  </view>
+  <view class="yzm">
+    <input placeholder="请输入手机短信验证码" class="yamn" />
+    <view class="a" catchtap="get">获取短信验证码</view>
+  </view>
+</view>
+<view class="bot">
+  <button bind:tap="next" bind:tap="binding">立即绑定</button>
+</view>

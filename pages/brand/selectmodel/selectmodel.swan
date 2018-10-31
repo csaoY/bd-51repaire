@@ -1,0 +1,71 @@
+<!-- pages/band/selectmodel/selectmodel.swan.l -->
+<import src="../../templates/netError.swan.l" />
+<view class="container">
+  <view class="tab-flex">
+    <scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px;" class="left-tab">
+      <view class="brand-title">
+        <text class="cla">型号</text>
+      </view>
+      <block s-for="{{versionList}}" s-for-index="idx" swan.key="id" s-for-item="version">
+        <view class="{{currentSelectedMobile==idx ? 'brand-active' : 'brand'}}" catchtap="mobileTypeTap" data-idx="{{idx}}" data-versionid="{{version.id}}">
+          <text class="cla">{{version.versionName}}</text>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px;" class="right-tab">
+      <view class="title-all" s-if="{{hasNetError===false}}">颜色</view>
+      <view class="kind-title" s-if="{{hasNetError===false}}">
+        <block s-for="{{colorList}}" s-for-index="idx" swan.key="id" s-for-item="color">
+          <view data-type="" catchtap="switchColor" class="normal {{currentSelectedColor==idx ? 'active' : ''}}" data-colorid="{{color.id}}" data-idx="{{idx}}">{{color.colorName}}</view>
+        </block>
+      </view>
+      <!--<template s-if="{{hasNetError===true}}" is="netError" data="{{...item}}" />-->
+      <view class="title-all" s-if="{{hasNetError===false}}">故障类型</view>
+
+
+      <view class="box" s-if="{{hasNetError===false}}">
+
+
+        <block s-for="plan in planList" s-for-index="idx" swan.key="faultVO.id" >
+          <view class="box-list">
+            <view class="box-list-title" bind:tap="detailed" data-plan="{{plan}}">
+              <view class="box-list-title-img">
+                <image src="http://msit.51xiuj.com/{{plan.faultVO.imgUrl1}}"></image>
+              </view>
+              <view class="box-list-title-txt">
+                <view>{{plan.faultVO.singleName}}问题</view>
+                <view class="box-list-title-txt-content">{{plan.faultVO.name}}</view>
+              </view>
+              <view class="box-list-title-arrow">
+                <image class="arrow" src="../../../images/ico_app_arr_r.png"></image>
+              </view>
+            </view>
+            <view class="box-list-content">
+              <block s-for="{{plan.planList}}" s-for-index="idx" swan.key="id" s-for-item="plan2">
+                <view class="box-list-content-list" catchtap="onSelectItem" data-id="{{plan2.id}}">
+                  <text class="bar-a">{{plan2.faultPartDetail}}</text>
+                  <text class="bar-b">￥{{plan2.price}}</text>
+                  <view s-if="{{plan2.isSelected==true}}" class="ico ico_choose" ></view>
+                  <view swan.elif="{{plan2.isSelected==false}}" class="ico" ></view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="" style="height:122rpx"></view>
+    </scroll-view>
+  </view>
+  <view class="bot">
+    <view class="goodscar">
+    <image src="/images/gouwuche.png" class="gwc"></image>
+      <view>{{selectItemCount}}</view>
+    </view>
+    <view class="price">
+      共计：
+      <text class="price-num">
+        ￥{{totalPrice}}</text>
+    </view>
+    <button bind:tap="next" disabled="{{selectedPlanList.length==0}}">下一步</button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/assessment/phonetest/phonetest.swan.l-->
+<view class="con">
+<view class="form">
+<input placeholder="输入手机号" />
+</view>
+
+<view class="bot">
+    <button bind:tap="next" >下一步</button>
+  </view>
+</view>
+

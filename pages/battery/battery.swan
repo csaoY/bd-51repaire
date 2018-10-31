@@ -1,0 +1,135 @@
+<view class="header">
+
+  <image src="/images/newImg/banner-screen.png" alt="" style="width:100%;" s-if="{{singleName=='屏幕'}}"></image>
+
+
+  <image src="/images/newImg/banner-bat.png" alt="" style="width:100%;" s-if="{{singleName=='电池'}}"></image>
+
+
+  <image src="/images/newImg/banner-nei.png" alt="" style="width:100%;" s-if="{{singleName=='内存'}}"></image>
+
+</view>
+<view class="note">
+  <view>
+    <image  src="/images/newImg/point.png" alt=""></image>
+    免费上门
+  </view>
+  <view>
+    <image  src="/images/newImg/point.png" alt=""></image>
+    20分钟快修
+  </view>
+  <view>
+    <image  src="/images/newImg/point.png" alt=""></image>
+    修完后付款
+  </view>
+</view>
+
+<view class="screen">
+
+
+  <view class="select" style="margin-top:10px;">
+    <view class="select-box clear" bind:tap="showList" data-step="1">
+      <text class="select-left">维修机型</text>
+      <view class="select-right">
+        <block s-for="item in mapList" swan.key="mapListName">
+          <view class="select-text " s-if="{{item.id==versionId}}" style="color:#ff6701">
+            {{item.versionName}}
+          </view>
+        </block>
+        <view class="select-text">请选择您的维修机型</view>
+        <view class="select-arrow">
+          <image src="/images/newImg/arrow2.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="option-list" s-if="{{step==1}}">
+      <view class="clear">
+        <block s-for="item in mapList" swan.key="mapList">
+          <view class="model-box {{item.id==versionId?'active':''}}" bind:tap='changeVersion' data-id="{{item.id}}">
+            <view class="name">{{item.versionName}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="select" style="margin-top:10px;">
+    <view class="select-box" bind:tap="showList" data-step="2">
+      <text class="select-left">机型颜色</text>
+      <view class="select-right">
+        <block  s-for="item in colorMapList" >
+        <view class="select-text" s-if="{{item.id==colorId}}"  style="color:#ff6701">
+          {{item.colorName}}
+        </view>
+
+        </block>
+        
+        <text class="select-text">请选择您的机身颜色</text>
+        <view class="select-arrow">
+          <image src="/images/newImg/arrow2.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="option-list" s-if="{{step==2}}">
+
+      <view class="clear" id="clear">
+        <block s-for="item in colorMapList" swan.key="colorList">
+          <view class="list {{ item.id==colorId?'active':''}}" bind:tap='changeColor' data-id="{{item.id}}">
+            <view class='name'>{{item.colorName}}</view>
+          </view>
+        </block>
+
+      </view>
+    </view>
+  </view>
+  <view class="select">
+    <view class="select-box" bind:tap="showList" data-step="3">
+      <text class="select-left">维修方案</text>
+      <view class="select-right">
+        <block s-for="{{list}}" swan.key="listName">
+          <view class="select-text " s-if="{{item.id==repairPlanId}}" style="color:#ff6701">
+            {{item.faultPartDetail}}
+          </view>
+        </block>
+        <text class="select-text" id="programmeText">请选择您的维修方案</text>
+        <view class="select-arrow">
+          <image src="/images/newImg/arrow2.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="option-list" s-if="{{step==3}}">
+      <view class="clear" id="repairPlan">
+        <block s-for="{{list}}" swan.key="list">
+          <view class="list {{ item.id==repairPlanId?'active':''}}" bind:tap='changeDetail' data-id="{{item.id}}" data-price="{{item.price}}">
+            <view class="name">{{item.faultPartDetail}}</view>
+            <view class="pri">{{item.price}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer-common">
+  <image mode="widthFix" src="/images/newImg/a1.jpg" alt=""></image>
+  <image s-if="{{singleName=='屏幕'}}" mode="widthFix" src="/images/newImg/screen1.jpg" alt=""></image>
+  <image s-if="{{singleName=='电池'}}" mode="widthFix" src="/images/newImg/bat1.jpg" alt=""></image>
+  <image s-if="{{singleName=='内存'}}" mode="widthFix" src="/images/newImg/nei1.jpg" alt=""></image>
+  <image mode="widthFix" src="/images/newImg/a2.jpg" alt=""></image>
+  <image mode="widthFix" src="/images/newImg/a3.jpg" alt=""></image>
+  <image mode="widthFix" src="/images/newImg/a4.jpg" alt=""></image>
+  <image mode="widthFix" src="/images/newImg/a5.jpg" alt=""></image>
+  <view style="height:51px;"></view>
+</view>
+<view class="bot">
+  <view class="pri">
+    金额:
+    <block s-for="{{list}}" swan.key="price">
+      <view s-if="{{item.id==repairPlanId}}" style="color:#ff6701;display:inline">
+        {{item.price}}
+      </view>
+    </block>
+  </view>
+  <view class="btn" bind:tap='getplan'>
+    下一步
+  </view>
+</view>

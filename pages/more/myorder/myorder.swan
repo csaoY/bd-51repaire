@@ -1,0 +1,31 @@
+<!-- pages/more/myorder/myorder.swan.l -->
+<view class="con">
+  <image src="/images/noorder.png" class="noorder" s-if="{{isOrderListEmpty==true}}"></image>
+  <view class="order">
+    <block s-for="{{orderList}}" s-for-index="idx" swan.key="id" s-for-item="order">
+      <view class="order-list" bind:tap="orderitem" data-id="{{order.id}}" data-ordertype="{{order.orderType}}">
+        <view class="first-bar">
+          <text class="time">{{order.createTime}}</text>
+          <text class="fin">{{order.state}}</text>
+        </view>
+        <view class="second-bar">
+          <view s-if="{{order.orderType==3}}" class="shou">收</view>
+          <view swan.elif="{{order.orderType==2}}" class="xiu">修</view>
+          <view swan.elif="{{order.orderType==1}}" class="xiu">修</view>
+          <view class="item">
+            <view class="order-num">{{order.orderNo}}</view>
+            <view class="money">
+              金额：
+              <text>￥{{order.totalPrice}} </text>
+            </view>
+          </view>
+          <view class="send">
+
+          <button catchtap="send" s-if="{{order.repairType==3||order.repairType==2}}" data-inepressNo="{{order.inExpressNo}}"
+           data-inexpressCompany="{{order.inExpressCompany}}" data-orderId="{{order.id}}">发货</button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
