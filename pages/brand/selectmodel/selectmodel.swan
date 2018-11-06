@@ -1,5 +1,5 @@
 <!-- pages/band/selectmodel/selectmodel.swan.l -->
-<import src="../../templates/netError.swan.l" />
+<!--<import src="../../templates/netError.swan.l" />-->
 <view class="container">
   <view class="tab-flex">
     <scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px;" class="left-tab">

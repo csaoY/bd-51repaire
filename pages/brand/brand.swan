@@ -1,4 +1,4 @@
-<import src="../templates/netError.swan.l"/>
+<!--<import src="../templates/netError.swan.l"/>-->
 <scroll-view scroll-y="true" class="container discovery" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
   <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
     <swiper class="activity" indicator-dots="{{indicatorDots}}"

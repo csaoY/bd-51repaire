@@ -1,5 +1,5 @@
-// var BASE_URL = "https://ssit.51xiuj.com/51xiu-sroutine/";//测试环境
-var BASE_URL = "https://s.51xiuj.com/51xiu-sroutine/";//正式环境
+var BASE_URL = "https://ssit.51xiuj.com/51xiu-sroutine/";//测试环境
+//var BASE_URL = "https://s.51xiuj.com/51xiu-sroutine/";//正式环境
 // var BASE_URL = "http://192.168.1.132:8080/51xiu-sroutine/";//内网环境
 // var BASE_URL = "https://www.easy-mock.com/mock/590184457a878d73716db365/51xiuj/";
 
