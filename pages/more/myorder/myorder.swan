@@ -2,7 +2,7 @@
 <view class="con">
   <image src="/images/noorder.png" class="noorder" s-if="{{isOrderListEmpty==true}}"></image>
   <view class="order">
-    <block s-for="{{orderList}}" s-for-index="idx" swan.key="id" s-for-item="order">
+    <block  s-for="order in orderList" swan.key="id" >
       <view class="order-list" bind:tap="orderitem" data-id="{{order.id}}" data-ordertype="{{order.orderType}}">
         <view class="first-bar">
           <text class="time">{{order.createTime}}</text>
@@ -10,8 +10,8 @@
         </view>
         <view class="second-bar">
           <view s-if="{{order.orderType==3}}" class="shou">收</view>
-          <view swan.elif="{{order.orderType==2}}" class="xiu">修</view>
-          <view swan.elif="{{order.orderType==1}}" class="xiu">修</view>
+          <view s-if="{{order.orderType==2}}" class="xiu">修</view>
+          <view s-if="{{order.orderType==1}}" class="xiu">修</view>
           <view class="item">
             <view class="order-num">{{order.orderNo}}</view>
             <view class="money">

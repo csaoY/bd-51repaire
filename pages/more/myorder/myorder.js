@@ -5,6 +5,7 @@ const _ = require('../../../utils/underscore');
 const request = require('../../../utils/request');
 const urls = require('../../../utils/urls');
 const { timeUtil } = require('../../../utils/util');
+import post from '../../../utils/new'
 var app = getApp();
 
 Page({
@@ -21,59 +22,32 @@ Page({
     }
   },
   onLoad: function (options) {
-    this.myorder()
+try {
+    var result = swan.getStorageSync('phone');
+    console.log(result)
+} catch (e) {
+}
+    this.myorder(result)
   },
-  myorder: function () {
-    if (util.isRepeatClick()) return//判断是否为重复点击
-    var that = this;
-    var openId = ""
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
-      //更新数据
-      if (!userInfo) {
-        return
-      } else {
-        swan.login({
-          success: function (res) {
-            if (res.code) {
-              //发起网络请求
-              openId = res.code
-              if (request.isLoading(that.addRQId)) return;
-              const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "openId": openId, "index": 0}) }, "")
-              that.addRQId = request.get(urls.order_query, values, function (data) {
-                if (data.result.code == 2000) {
-                  var myOrderList = data.orderList
-                  var new_orderList = myOrderList.map(function (elem) {
-                    elem.createTime = timeUtil.format('yyyy-MM-dd hh:mm:ss', elem.createTime),
-                      elem.state = deviceStateStr(elem.state, elem.orderType)
-                    return elem
-                  });
-                  that.setData({
-                    isOrderListEmpty: new_orderList.length==0,
-                    orderList: new_orderList
-                  }); console.log(new_orderList)
-                } else if (data.result.code == 5018) {
-                  swan.navigateTo({
-                    url: '../login/login'
-                  })
-                }
-                console.log("装载我的订单查询成功")
-              }, that, { isShowLoading: true }
-              );
-            } else {
-              swan.showToast({
-                title: '需要允许微信授权才能继续使用',
-                icon: 'success',
-                duration: 2000
-              })
-              console.log('获取用户登录态失败！' + res.errMsg)
-              return
-            }
-          }
-        })
-      }
+  myorder: function (phone) {
+    const that=this;
+    const obj=new Object();
+    obj.content=JSON.stringify({
+      'phone':phone,
+      "index":'0'
     })
-
+    post(urls.order_query,obj).then((res)=>{
+     var myOrderList = res.data.orderList
+                    var new_orderList = myOrderList.map(function (elem) {
+                      elem.createTime = timeUtil.formatTime(new Date(elem.createTime)),
+                        elem.state = deviceStateStr(elem.state, elem.orderType)
+                      return elem
+                    });
+                    that.setData({
+                      isOrderListEmpty: new_orderList.length == 0,
+                      orderList: new_orderList
+                    }); console.log(new_orderList)
+    })
   },
   orderitem: function (e) {
     if (util.isRepeatClick()) return//判断是否为重复点

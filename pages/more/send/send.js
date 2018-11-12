@@ -29,7 +29,7 @@ Page({
 
   queryInexpress: function () {
     var that = this
-    const values = _.extend({
+    const values = Object.assign({
       id: "123",
       channel: 6,
       content: JSON.stringify({
@@ -79,7 +79,7 @@ Page({
       return
     }
 
-    const values = _.extend({
+    const values = Object.assign({
       id: "123",
       channel: 6,
       content: JSON.stringify({

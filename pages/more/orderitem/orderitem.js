@@ -33,7 +33,7 @@ Page({
   },
   loadOrder() {
     var that = this;
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "orderId": this.data.orderid }) });
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "orderId": this.data.orderid }) });
     that.addRQId = request.get(urls.order_getByOrderId, values, function (data) {
       console.log(data);
       var createTime = data.orderInfo.createTime

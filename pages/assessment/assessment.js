@@ -43,7 +43,7 @@ Page({
   //手机评估列表
   loadAssessments: function () {
     var that = this;
-    const values = _.extend({ id: "123", channel: 6,content: JSON.stringify({ "versionId": that.data.versionId }) }, "");
+    const values = Object.assign({ id: "123", channel: 6,content: JSON.stringify({ "versionId": that.data.versionId }) }, "");
     that.addRQId = request.get(urls.versionProperty_get, values, function (data) {
       var assessments = data.detailInfoList;
       for (var i = 0; i < assessments.length; i++) {

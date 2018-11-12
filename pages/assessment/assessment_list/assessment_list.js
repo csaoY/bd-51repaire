@@ -85,7 +85,7 @@ Page({
   },
   getRecyclerPrice: function (versionId, detailIds) {//获取回收价格
     var that = this;
-    const values = _.extend({ id: "123", channel: 6,content: JSON.stringify({ "versionId": versionId, "detailIds": detailIds }) }, "");
+    const values = Object.assign({ id: "123", channel: 6,content: JSON.stringify({ "versionId": versionId, "detailIds": detailIds }) }, "");
     that.addRQId = request.get(urls.estimateCalculate_get, values, function (data) {
       this.setData({
         price: data.price

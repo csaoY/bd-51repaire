@@ -2,157 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25b57ade-05f5-449d-a3ff-0e79a53404df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data/data_discovery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data/data_discovery_next.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data/data_index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data/data_index_next.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/1444983318907-_DSC1826.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/24213.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/24280.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/allread.png" afterPath="$PROJECT_DIR$/images/allread.png" />
-      <change beforePath="$PROJECT_DIR$/images/book.png" afterPath="$PROJECT_DIR$/images/book.png" />
-      <change beforePath="$PROJECT_DIR$/images/bottom_tab.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/burger.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/burger_focus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/chat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/chat_focus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/comment.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/comment2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/discovery.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/discovery_focus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/draft.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/eye.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/flag.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/good-bad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/heart2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/icon1.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/icon8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/icon9.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/index.png" afterPath="$PROJECT_DIR$/images/index.png" />
-      <change beforePath="$PROJECT_DIR$/images/index_focus.png" afterPath="$PROJECT_DIR$/images/index_focus.png" />
-      <change beforePath="$PROJECT_DIR$/images/index_scroll.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/invite.png" afterPath="$PROJECT_DIR$/images/invite.png" />
-      <change beforePath="$PROJECT_DIR$/images/lighting.png" afterPath="$PROJECT_DIR$/images/lighting.png" />
-      <change beforePath="$PROJECT_DIR$/images/live.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/more.png" afterPath="$PROJECT_DIR$/images/more.png" />
-      <change beforePath="$PROJECT_DIR$/images/navigation.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/recent.png" afterPath="$PROJECT_DIR$/images/recent.png" />
-      <change beforePath="$PROJECT_DIR$/images/ring.png" afterPath="$PROJECT_DIR$/images/ring.png" />
-      <change beforePath="$PROJECT_DIR$/images/ring_focus.png" afterPath="$PROJECT_DIR$/images/ring_focus.png" />
-      <change beforePath="$PROJECT_DIR$/images/search.png" afterPath="$PROJECT_DIR$/images/search.png" />
-      <change beforePath="$PROJECT_DIR$/images/star.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/star2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/top_tab.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/v_discovery.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/v_index.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/write.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/zhi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/answer/answer.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/answer/answer.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/answer/answer.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/answer/answer.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/chat/chat.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/chat/chat.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/chat/chat.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/chat/chat.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/discovery/discovery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/discovery/discovery.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/discovery/discovery.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/discovery/discovery.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.json" afterPath="$PROJECT_DIR$/pages/index/index.json" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/more/more.js" afterPath="$PROJECT_DIR$/pages/more/more.js" />
-      <change beforePath="$PROJECT_DIR$/pages/more/more.json" afterPath="$PROJECT_DIR$/pages/more/more.json" />
-      <change beforePath="$PROJECT_DIR$/pages/more/more.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/more/more.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/notify/notify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/notify/notify.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/notify/notify.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/notify/notify.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/question/question.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/question/question.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/question/question.wxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/question/question.wxss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" afterPath="$PROJECT_DIR$/utils/util.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/assessment/assessment.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/assessment/assessment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/assessment/assessment.swan" beforeDir="false" afterPath="$PROJECT_DIR$/pages/assessment/assessment.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/assessment/assessment_list/assessment_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/assessment/assessment_list/assessment_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/assessment/placeorder/placeorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/assessment/placeorder/placeorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/brand/brand.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/brand/brand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/brand/placeorder/placeorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/brand/placeorder/placeorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/brand/selectmodel/selectmodel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/brand/selectmodel/selectmodel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/memoryUpgrade/memoryUpgrade.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/memoryUpgrade/memoryUpgrade.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/more/more.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/more/more.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/more/myorder/myorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/more/myorder/myorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/more/orderitem/orderitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/more/orderitem/orderitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/more/orderitemre/orderitemre.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/more/orderitemre/orderitemre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/more/send/send.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/more/send/send.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/recycling/recycling.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/recycling/recycling.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/recycling/recycling.swan" beforeDir="false" afterPath="$PROJECT_DIR$/pages/recycling/recycling.swan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-193847558">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.edit" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="recycle.png" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/recycle.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="index.swan" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index/index.swan">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recent.png" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/recent.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="my.png" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/my.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="more.png" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/more.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="442">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ring.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/ring.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="315" column="9" lean-forward="true" selection-start-line="315" selection-start-column="9" selection-end-line="315" selection-end-column="9" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repair.png" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/ring.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/repair.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -163,13 +123,23 @@
       <find>wx:for</find>
       <find>bindtap</find>
       <find>wx.</find>
+      <find>_.extend(</find>
+      <find>object.a</find>
+      <find>_.</find>
+      <find>&lt;import src=&quot;../templates/netError.swan.l&quot; /&gt;</find>
+      <find>bdbo</find>
     </findStrings>
     <replaceStrings>
       <replace>s-if</replace>
       <replace>s-for</replace>
       <replace>bind:tap</replace>
       <replace>swan.</replace>
+      <replace>Object.assign(</replace>
+      <replace>&lt;!--&lt;import src=&quot;../templates/netError.swan.l&quot; /&gt;--&gt;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,39 +169,28 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="bd-51" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bd-51" type="462c0819:PsiDirectoryNode" />
+              <item name="bd-51repaire" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bd-51repaire" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bd-51" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bd-51" type="462c0819:PsiDirectoryNode" />
+              <item name="bd-51repaire" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bd-51repaire" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bd-51" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bd-51" type="462c0819:PsiDirectoryNode" />
+              <item name="bd-51repaire" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bd-51repaire" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,33 +228,33 @@
       <workItem from="1492998253683" duration="4524000" />
       <workItem from="1540779576546" duration="4172000" />
       <workItem from="1540948460892" duration="5303000" />
+      <workItem from="1541475050245" duration="1142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13999000" />
+    <option name="totallyTimeSpent" value="15141000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1100" extended-state="0" />
-    <editor active="true" />
+    <frame x="1" y="23" width="1918" height="877" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24934107" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,119 +263,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/recycle.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.swan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/my.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/recent.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/more.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/ring.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/repair.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/recycle.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/recent.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/my.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/more.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/ring.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/repair.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.wxss" />
     <entry file="file://$PROJECT_DIR$/jsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/allread.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/book.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/burger.png" />
     <entry file="file://$PROJECT_DIR$/images/write.png" />
@@ -425,60 +284,51 @@
     <entry file="file://$PROJECT_DIR$/images/v_discovery.png" />
     <entry file="file://$PROJECT_DIR$/images/star.png" />
     <entry file="file://$PROJECT_DIR$/images/search.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/ring.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/repair.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/recent.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/my.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/mobile_ad_shili.webp" />
-    <entry file="file://$PROJECT_DIR$/images/more.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/fix/fix.wxss" />
     <entry file="file://$PROJECT_DIR$/pages/fix/fix.wxml" />
     <entry file="file://$PROJECT_DIR$/../51修_免费上门维修与回收_手机维修_手机回收.html" />
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxss" />
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml" />
-    <entry file="file://$PROJECT_DIR$/images/recycle.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/templates/netError.wxml" />
+    <entry file="file://$PROJECT_DIR$/images/recycle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.swan">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="476">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/recent.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/my.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/more.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/ring.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/repair.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="315" column="9" lean-forward="true" selection-start-line="315" selection-start-column="9" selection-end-line="315" selection-end-column="9" />
         </state>
       </provider>
     </entry>

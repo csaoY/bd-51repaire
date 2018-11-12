@@ -48,7 +48,7 @@ Page({
   loadMobiles: function () {
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123",channel: 6 }, "");
+    const values = Object.assign({ id: "123",channel: 6 }, "");
     that.addRQId = request.get(urls.recyclebrand_query, values, function (data) {
       that.recycleVersionQuery(data.brandInfo[0].id, data.typeInfo[0].id)
       that.setData({
@@ -82,7 +82,7 @@ Page({
   //获取回收型号数据接口
   recycleVersionQuery: function (brandId, typeId) {
     var that = this;
-    const values = _.extend({ id: "123", channel: 6, content: JSON.stringify({ "brandId": brandId, "typeId": typeId }) }, "");
+    const values = Object.assign({ id: "123", channel: 6, content: JSON.stringify({ "brandId": brandId, "typeId": typeId }) }, "");
     that.addRQId = request.get(urls.recycleVersion_query, values, function (data) {
       that.setData({
         currentSelectedTypeId: typeId,

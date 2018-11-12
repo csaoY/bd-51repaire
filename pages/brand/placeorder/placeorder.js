@@ -34,7 +34,7 @@ Page({
   //获取行政区域
   loadVersionGetAreaByCode: function (code = "") {
     var that = this;
-    const values = _.extend({ id: "123", channel: 6, content: JSON.stringify({ "code": code }) }, "");
+    const values = Object.assign({ id: "123", channel: 6, content: JSON.stringify({ "code": code }) }, "");
     that.addRQId = request.get(urls.version_getAreaByCode, values, function (data) {
       if (code == '') {
         var cityList = data.areaList;
@@ -106,7 +106,7 @@ Page({
     if (pIds != "") {
       pIds = pIds.substr(0, pIds.length - 1)
     }
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": contactPhone, "planIds": pIds }) }, "")
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": contactPhone, "planIds": pIds }) }, "")
     this.addRQId = request.get(urls.order_coupon, values, function (data) {
       var couponList = data.couponList.map(function (elem) {
         elem.isSelected = false
@@ -261,7 +261,7 @@ Page({
     }
 
     if (request.isLoading(that.addRQId)) return;
-    const values = _.extend({
+    const values = Object.assign({
       id: "123",
       channel: 6,
       content: JSON.stringify({

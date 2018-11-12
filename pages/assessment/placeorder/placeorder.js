@@ -29,7 +29,7 @@ Page({
   //获取行政区域
   loadVersionGetAreaByCode: function (code = "") {
     var that = this;
-    const values = _.extend({ id: "123", channel: 6,content: JSON.stringify({ "code": code }) }, "");
+    const values = Object.assign({ id: "123", channel: 6,content: JSON.stringify({ "code": code }) }, "");
     // that.addRQId = request.get(urls.recycle_getAreaByCode, values, function (data) {
     that.addRQId = request.get(urls.recycle_getAreaByCode, values, function (data) {
       if (code == '') {
@@ -163,7 +163,7 @@ Page({
               //发起网络请求
               openId = res.code
               if (request.isLoading(that.addRQId)) return
-              const values = _.extend({
+              const values = Object.assign({
                 id: "123",
                 channel: 6,
                 content: JSON.stringify({

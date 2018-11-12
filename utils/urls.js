@@ -1,7 +1,8 @@
-var BASE_URL = "https://ssit.51xiuj.com/51xiu-sroutine/";//测试环境
-//var BASE_URL = "https://s.51xiuj.com/51xiu-sroutine/";//正式环境
+//var BASE_URL = "https://ssit.51xiuj.com/51xiu-sroutine/";//测试环境
+var BASE_URL = "https://s.51xiuj.com/51xiu-sroutine/";//正式环境
 // var BASE_URL = "http://192.168.1.132:8080/51xiu-sroutine/";//内网环境
 // var BASE_URL = "https://www.easy-mock.com/mock/590184457a878d73716db365/51xiuj/";
+//var BASE_URL="http://192.168.168.239"
 
 module.exports = {
     baseURL: "https://slsit.51xiuj.com",
@@ -21,7 +22,7 @@ module.exports = {
     recycle_getAreaByCode: BASE_URL + "v1/recycle/getAreaByCode",//获取回收订单行政区域接口
     recycleOrder_insert: BASE_URL + "v1/recycleOrder/insert",//提交回收订单接口
     order_query: BASE_URL + "v1/order/query",//我的订单查询接口
-    customer_login: BASE_URL + "v1/customer/login",//登录接口
+    customer_login: BASE_URL + "v1/appCustomer/login",//登录接口
     vercode_send: BASE_URL + "v1/vercode/send",//短信验证码接口
     order_getByOrderId: BASE_URL + "v1/order/getByOrderId",//订单详情查询接口
     verifyCode_GenerateVerifyCode: BASE_URL + "verifyCode/GenerateVerifyCode",//获取图形验证码接口

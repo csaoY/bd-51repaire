@@ -100,7 +100,7 @@ Page({
   loadBandQuery: function () {
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6, channel: 6}, "");
+    const values = Object.assign({ id: "123" ,channel: 6, channel: 6}, "");
     that.addRQId = request.get(urls.brand_query, values, function (data) {
       console.log(data.brandInfo)
       that.setData({
@@ -199,7 +199,7 @@ Page({
       return
     }
 
-    const values = _.extend({
+    const values = Object.assign({
       id: "123",
       channel: 6,
       content: JSON.stringify({
@@ -304,7 +304,7 @@ Page({
     var verifyCode = e.detail.value.verifyCode
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": this.data.phoneNumber, "verifyCode": verifyCode }) }, "")
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": this.data.phoneNumber, "verifyCode": verifyCode }) }, "")
     that.addRQId = request.get(urls.vercode_send, values, function (data) {
       that.util("close")
       var total_micro_second = 60 * 1000;    //表示60秒倒计时，想要变长就把60修改更大

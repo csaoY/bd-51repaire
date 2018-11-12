@@ -27,6 +27,21 @@ Page({
     })
   },
   myorder: function () {
+    
+try {
+    var result = swan.getStorageSync('phone');
+    console.log(result)
+} catch (e) {
+}
+    if(result){
+      swan.navigateTo({
+        url:'./myorder/myorder'
+      })
+      return;
+
+    }
+    //console.log(phone)
+   
     console.log('hahahha')
    // if (util.isRepeatClick()) return//判断是否为重复点击
     var that = this;
@@ -40,12 +55,14 @@ Page({
         var openId = ""
         swan.login({
           success: function (res) {
+            console.log('123',res)
             if (res.code) {
               //发起网络请求
               openId = res.code
               if (request.isLoading(that.addRQId)) return;
-              const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "openId": openId, "index": 0}) }, "")
+              const values = Object.assign({ channel: 7, content: JSON.stringify({ "openId": openId, "index": 0}) }, "")
               that.addRQId = request.get(urls.order_query, values, function (data) {
+                console.log(data)
                 if (data.result.code == 2000) {
                   swan.navigateTo({
                     url: 'myorder/myorder'

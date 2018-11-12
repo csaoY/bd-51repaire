@@ -172,7 +172,7 @@ $.listener = (function ($) {
 		}
 	};
 })($);
-_.extend($, $.listener);
+Object.assign($, $.listener);
 
 /**
  * 日志管理

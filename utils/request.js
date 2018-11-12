@@ -113,7 +113,7 @@ module.exports = {
 	 */
 	getRequestOptions: function (options) {
 		//必须配置
-		options = _.extend({
+		options = Object.assign({
 			header: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
@@ -145,7 +145,7 @@ module.exports = {
 	 */
 	get: function (url, data, callback, callbackObj, options, requestId) {
 		"use strict";
-		return this.request(_.extend({
+		return this.request(Object.assign({
 			url: url,
 			data: data,
 			method: "GET",
@@ -166,7 +166,7 @@ module.exports = {
 	post: function (url, data, callback, callbackObj, options, requestId) {
 		"use strict";
 		console.log(data);
-		return this.request(_.extend({
+		return this.request(Object.assign({
 			url: url,
 			data: data,
 			method: "POST",
@@ -186,7 +186,7 @@ module.exports = {
 	 */
 	put: function (url, data, callback, callbackObj, options, requestId) {
 		"use strict";
-		return this.request(_.extend({
+		return this.request(Object.assign({
 			url: url,
 			data: data,
 			method: "PUT",
@@ -206,7 +206,7 @@ module.exports = {
 	 */
 	delete: function (url, data, callback, callbackObj, options, requestId) {
 		"use strict";
-		return this.request(_.extend({
+		return this.request(Object.assign({
 			url: url,
 			data: data,
 			method: "DELETE",
@@ -255,7 +255,7 @@ module.exports = {
 		//可以防止多次请求
 		if (this.isLoading(requestId)) return requestId;
 
-		options = this.getRequestOptions(_.extend(options || {}, {
+		options = this.getRequestOptions(Object.assign(options || {}, {
 			url: url,
 			filePath: filePath, name: name,
 			formData: data,

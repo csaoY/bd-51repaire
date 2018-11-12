@@ -2,6 +2,7 @@ var util = require('../../utils/util.js')
 const _ = require('../../utils/underscore');
 const request = require('../../utils/request');
 const urls = require('../../utils/urls');
+import post from '../../utils/requestNew'
 var app = getApp()
 Page({
   data: {
@@ -86,12 +87,16 @@ Page({
               console.log(openId)
               if (request.isLoading(that.addRQId)) return;
               
-              const values = _.extend({ id: "123", channel:7, content: JSON.stringify({ "phoneNumber": phoneNumber, 
-              "vercode": vercode }) }, "")
+              const values = Object.assign({channel:6, content: JSON.stringify({ "phoneNumber": phoneNumber,
+              "vercode": vercode ,"openId":openId,"index":0}) }, "")
               that.addRQId = request.post(urls.customer_login, values, function (data) {
                  console.log(openId+222222222222)
                 console.log("登录接口成功");
-                that.myorder()
+                console.log(data)
+                   swan.setStorageSync('phone',data.customer.phoneNumber);
+                swan.redirectTo({
+                  url: '../more/myorder/myorder'
+                });
               }, that, { isShowLoading: true });
             } else {
               swan.showToast({
@@ -108,38 +113,14 @@ Page({
     })
   },
   myorder: function () {
-    console.log('myorder')
-    var that = this;
-    var openId = ""
-    swan.login({
-      success: function (res) {
-        if (res.code) {
-          //发起网络请求
-          openId = res.code
-          // if (request.isLoading(that.addRQId)) return;
-          const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({"phone":that.data.phoneNumber, "index": 0 }) }, "")
-          that.addRQId = request.get(urls.order_query, values, function (data) {
-            console.log('2333')
-            if (data.result.code == 2000) {
-              swan.redirectTo({
-                url: '../more/myorder/myorder?orderList=' + JSON.stringify(data.orderList)
-              })
-            } else if (data.result.code == 5018) {
-
-            }
-            console.log("装载我的订单查询成功")
-          }, that, { isShowLoading: false }
-          );
-        } else {
-          swan.showToast({
-            title: '需要允许微信授权才能继续使用',
-            icon: 'success',
-            duration: 2000
-          })
-          console.log('获取用户登录态失败！' + res.errMsg)
-          return
-        }
-      }
+    const that=this;
+    const obj=new Object();
+    obj.content=JSON.stringify({
+      'phone':that.data.phoneNumber,
+      'index':'0'
+    })
+    post(urls.order_query).then((res)=>{
+      console.log(res)
     })
   },
   setVerify: function (e) {
@@ -196,7 +177,7 @@ Page({
     var verifyCode = e.detail.value.verifyCode
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": this.data.phoneNumber, "verifyCode": verifyCode }) }, "")
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "phoneNumber": this.data.phoneNumber, "verifyCode": verifyCode }) }, "")
     that.addRQId = request.get(urls.vercode_send, values, function (data) {
       that.util("close")
       var total_micro_second = 60 * 1000;    //表示60秒倒计时，想要变长就把60修改更大

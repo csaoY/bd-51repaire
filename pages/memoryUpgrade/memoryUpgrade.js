@@ -37,7 +37,7 @@ Page({
   loaditem: function () {
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6 }, "");
+    const values = Object.assign({ id: "123" ,channel: 6 }, "");
     that.addRQId = request.get(
       urls.versionRam_queryById,
       values,
@@ -76,7 +76,7 @@ Page({
   loadVersionRamFaultQueryById: function (versionid) {
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "versionId": versionid }) }, "")
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "versionId": versionid }) }, "")
     that.addRQId = request.get(urls.versionRamFault_queryById, values, function (data) {
       that.setData({
         ramPlanList: data.ramPlanList

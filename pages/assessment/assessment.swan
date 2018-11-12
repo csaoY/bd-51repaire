@@ -1,4 +1,4 @@
-<import src="../templates/netError.swan.l" />
+<!--<import src="../templates/netError.swan.l" />-->
 <view class="con">
   <progress percent="{{pro}}" show-info activeColor="#ff9d00" backgroundColor="#d3d3d3" />
   <view class="phone-kind">

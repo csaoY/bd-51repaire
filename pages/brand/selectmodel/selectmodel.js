@@ -88,7 +88,7 @@ Page({
   loadVersion: function () {
     var that = this;
     if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "123" ,channel: 6, content: JSON.stringify({ "brandId": that.data.brandId, "deviceTypeId": that.data.typeId }) }, "")
+    const values = Object.assign({ id: "123" ,channel: 6, content: JSON.stringify({ "brandId": that.data.brandId, "deviceTypeId": that.data.typeId }) }, "")
     that.addRQId = request.get(urls.version_queryById, values, function (data) {
       var currentSelectedVersionId = 0
       if (typeof data.versionInfo[0] != 'undefined') {
@@ -106,7 +106,7 @@ Page({
   loadVersionQueryVersionColor: function (versionId) {
     var that = this;
     // if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "456" ,channel: 6, content: JSON.stringify({ "versionId": versionId }) }, "")
+    const values = Object.assign({ id: "456" ,channel: 6, content: JSON.stringify({ "versionId": versionId }) }, "")
     that.addRQId = request.get(urls.version_queryVersionColor, values, function (data) {
       var currentSelectedColorId = 0
       if (typeof data.colorList[0] != 'undefined') {
@@ -135,7 +135,7 @@ Page({
   loadFaultQueryById: function (colorId) {
     var that = this;
     // if (request.isLoading(this.addRQId)) return;
-    const values = _.extend({ id: "789" ,channel: 6, content: JSON.stringify({ "colorId": colorId }) }, "")
+    const values = Object.assign({ id: "789" ,channel: 6, content: JSON.stringify({ "colorId": colorId }) }, "")
     that.addRQId = request.get(urls.fault_queryById, values, function (data) {
       var planList = data.planList
       var planListLength = planList.length
